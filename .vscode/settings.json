@@ -6,6 +6,9 @@
         "memory": "cpp",
         "system_error": "cpp",
         "thread": "cpp",
-        "typeindex": "cpp"
+        "typeindex": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp",
+        "cstdlib": "cpp"
     }
 }
