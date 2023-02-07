@@ -9,6 +9,10 @@
         "typeindex": "cpp",
         "cmath": "cpp",
         "complex": "cpp",
-        "cstdlib": "cpp"
+        "cstdlib": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp"
     }
 }
