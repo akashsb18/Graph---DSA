@@ -17,8 +17,8 @@
 //     priority_queue<pair<int, pair<int, int>>, vector<pair<int, pair<int, int>>>, greater<pair<int, pair<int, int>>>> pq;
 
 //     pq.push({0, source});
-//     int row[] = {-1, 0, 1, 0};
-//     int col[] = {0, 1, 0, -1};
+    // int row[] = {-1, 0, 1, 0};
+    // int col[] = {0, 1, 0, -1};
 //     while (!pq.empty())
 //     {
 //         int curRow = pq.top().second.first;
