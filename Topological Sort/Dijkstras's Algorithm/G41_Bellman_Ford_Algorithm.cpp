@@ -8,7 +8,9 @@ int main()
 
     int V = 3, S = 2;
     vector<int> dist(V, 1e8);
+
     dist[S] = 0;
+
     for (int i = 0; i < V - 1; i++)
     {
         for (auto it : edges)
@@ -22,6 +24,7 @@ int main()
             }
         }
     }
+
     for (int i = 0; i < V - 1; i++)
     {
         for (auto it : edges)
@@ -31,16 +34,47 @@ int main()
             int wt = it[2];
             if (dist[u] != 1e8 and wt + dist[u] < dist[v])
             {
-                return {-1};
+                return -1;
             }
         }
     }
+
     for (auto it : dist)
     {
         cout << it << " ";
     }
 
-    // return dist;
+    // dist[S] = 0;
+    // for (int i = 0; i < V - 1; i++)
+    // {
+    //     for (auto it : edges)
+    //     {
+    //         int u = it[0];
+    //         int v = it[1];
+    //         int wt = it[2];
+    //         if (dist[u] != 1e8 and wt + dist[u] < dist[v])
+    //         {
+    //             dist[v] = wt + dist[u];
+    //         }
+    //     }
+    // }
+    // for (int i = 0; i < V - 1; i++)
+    // {
+    //     for (auto it : edges)
+    //     {
+    //         int u = it[0];
+    //         int v = it[1];
+    //         int wt = it[2];
+    //         if (dist[u] != 1e8 and wt + dist[u] < dist[v])
+    //         {
+    //             return {-1};
+    //         }
+    //     }
+    // }
+    // for (auto it : dist)
+    // {
+    //     cout << it << " ";
+    // }
 
     return 0;
 }

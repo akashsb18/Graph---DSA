@@ -40,13 +40,18 @@ int main()
         }
     }
 
+    // for (auto it : indegree)
+    // {
+    //     if (it != 0)
+    //     {
+    //         return 1;
+    //     }
+    // }
+
     for (auto it : indegree)
     {
-        if (it != 0)
-        {
-            return 1;
-        }
+        cout << it << " ";
     }
-    return 0;
+
     return 0;
 }

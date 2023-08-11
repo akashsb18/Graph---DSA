@@ -1,16 +1,17 @@
+
 #include <bits/stdc++.h>
 using namespace std;
 
-void DFS(int grid[][6], vector<int> adjList[], int vis[], int node, vector<int> &dfs)
+void adjacencylist(vector<int> adj[], int V)
 {
-    vis[node] = 1;
-    dfs.push_back(node);
-    for (auto it : adjList[node])
+    for (int i = 0; i < V; i++)
     {
-        if (vis[it] == 0)
+        cout << i << "->";
+        for (int &x : adj[i])
         {
-            DFS(grid, adjList, vis, it, dfs);
+            cout << x << " ";
         }
+        cout << endl;
     }
 }
 
@@ -40,13 +41,32 @@ int main()
         }
     }
 
+    adjacencylist(adjList, n);
+
     int vis[n] = {0};
+    vector<int> bfs;
 
-    vector<int> dfs;
+    queue<int> q;
 
-    DFS(grid, adjList, vis, 1, dfs);
+    q.push(1);
+    vis[1] = 1;
 
-    for (auto it : dfs)
+    while (!q.empty())
+    {
+        int node = q.front();
+        q.pop();
+        bfs.push_back(node);
+        for (auto it : adjList[node])
+        {
+            if (vis[it] == 0)
+            {
+                vis[it] = 1;
+                q.push(it);
+            }
+        }
+    }
+
+    for (auto it : bfs)
     {
         cout << it << " ";
     }
